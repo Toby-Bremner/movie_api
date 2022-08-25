@@ -1,0 +1,24 @@
+
+URL: /
+ Timestamp: Thu Aug 25 2022 13:36:08 GMT-0300 (Atlantic Daylight Time)
+
+URL: /favicon.ico
+ Timestamp: Thu Aug 25 2022 13:36:08 GMT-0300 (Atlantic Daylight Time)
+
+URL: /
+ Timestamp: Thu Aug 25 2022 13:36:13 GMT-0300 (Atlantic Daylight Time)
+
+URL: /favicon.ico
+ Timestamp: Thu Aug 25 2022 13:36:13 GMT-0300 (Atlantic Daylight Time)
+
+URL: /documentation
+ Timestamp: Thu Aug 25 2022 13:36:24 GMT-0300 (Atlantic Daylight Time)
+
+URL: /favicon.ico
+ Timestamp: Thu Aug 25 2022 13:36:24 GMT-0300 (Atlantic Daylight Time)
+
+URL: /documentation
+ Timestamp: Thu Aug 25 2022 13:36:28 GMT-0300 (Atlantic Daylight Time)
+
+URL: /favicon.ico
+ Timestamp: Thu Aug 25 2022 13:36:28 GMT-0300 (Atlantic Daylight Time)

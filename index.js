@@ -3,7 +3,12 @@ const morgan = require("morgan");
 const app = express();
 
 app.use(morgan("dev"));
+app.use(express.json());
 app.use(express.static("public"));
+
+app.get("/", function (request, response) {
+  response.send("Welcome to the greatest movies list!");
+});
 
 app.get("/movies", function (request, response) {
   let movies = [
@@ -21,8 +26,45 @@ app.get("/movies", function (request, response) {
   response.json(movies);
 });
 
-app.get("/", function (request, response) {
-  response.send("Welcome to the greatest movies list!");
+app.get("/movies/:title", function (request, response) {
+  let title = request.params.title;
+  response.json({ title, ratings: "9.2" });
+});
+
+app.get("/movies/genre/:name", function (req, res) {
+  let genreName = req.params.name;
+  res.json({ title: genreName, description: "genre of film" });
+});
+
+app.get("/movies/director/:name", function (req, res) {
+  let directorName = req.params.name;
+  res.json({
+    name: directorName,
+    description: "Director has directed many films",
+  });
+});
+
+app.post("/users/register", function (req, res) {
+  let userName = req.body.userName;
+  let password = req.body.password;
+  res.json({ message: `Welcome ${userName} to the best movies list` });
+});
+
+app.put("/users/:id", function (req, res) {
+  let userName = req.body.userName;
+  res.json({ message: `User ${userName} info updated` });
+});
+
+app.post("/users/movies/favorites", function (req, res) {
+  res.json({ message: "Movie added to favorites list" });
+});
+
+app.delete("/users/movies/favorites/:id", function (req, res) {
+  res.json({ message: "Movie removed from favorites list" });
+});
+
+app.delete("/users/:id", function (req, res) {
+  res.json({ message: "Account deleted" });
 });
 
 app.use(function (request, response, next) {

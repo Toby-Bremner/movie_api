@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Documention</title>
   </head>
   <body>
@@ -12,16 +13,86 @@
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe,
       obcaecati!
     </p>
-
-    <h2>Movie Endpoints</h2>
-    <h4>GET /movies</h4>
-    <h4>GET /movies/:title</h4>
-    <h4>GET /movies/genre/:name</h4>
-    <h4>GET /movies/director/:name</h4>
-    <h4>POST /user/register</h4>
-    <h4>PUT /users/:id</h4>
-    <h4>POST /users/movies/favorites</h4>
-    <h4>DELETE /users/movies/favorites/:id</h4>
-    <h4>DELETE /users/:id</h4>
+    <table>
+      <tr>
+        <th>Logic</th>
+        <th>URL</th>
+        <th>HTTP Method</th>
+        <th>Request body data format</th>
+        <th>Response body data format</th>
+      </tr>
+      <tr>
+        <td>Get a List of movies</td>
+        <td>/movies</td>
+        <td>GET</td>
+        <td>None</td>
+        <td>Returns a JSON object with all movies</td>
+      </tr>
+      <tr>
+        <td>Get one movie data by title</td>
+        <td>/movies/:title</td>
+        <td>GET</td>
+        <td>None</td>
+        <td>
+          A JSON object about a single movie. Example:
+          <code
+            >{ "Title": "Shawshank Redemption", "Description": "A falsely
+            accused man tries to break out of prison", "Director": { "Name":
+            "Frank Darabont", "Bio": "Famous movie director", "Birth": "1959" },
+            "Genre": { "Name": "Drama", "Description": "Guns a blazin" },
+            "ImageUrl": "" }</code
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>Return data about a genre (description) by title</td>
+        <td>/movies/genre/:title</td>
+        <td>GET</td>
+        <td>None</td>
+        <td>A JSON object with information about a genre</td>
+      </tr>
+      <tr>
+        <td>Get director information by name</td>
+        <td>/movies/director/:name</td>
+        <td>GET</td>
+        <td>None</td>
+        <td>A JSON object with information about a director</td>
+      </tr>
+      <tr>
+        <td>Register user</td>
+        <td>/users/register</td>
+        <td>POST</td>
+        <td><code>{"name": "Toby"}</code></td>
+        <td>A JSON object with a success message</td>
+      </tr>
+      <tr>
+        <td>Updates user information</td>
+        <td>/users/:id</td>
+        <td>PUT</td>
+        <td><code>{"name": "Toby"}</code></td>
+        <td>A JSON object with a success message</td>
+      </tr>
+      <tr>
+        <td>Adds a movie to users favorites list</td>
+        <td>/users/movies/favorites</td>
+        <td>POST</td>
+        <td><code>{"movieId":"7890"}</code></td>
+        <td>A JSON object with a success message</td>
+      </tr>
+      <tr>
+        <td>Deletes a movies fro users favorites list</td>
+        <td>/users/movies/favorites/:id</td>
+        <td>DELETE</td>
+        <td>None</td>
+        <td>A JSON object with a success message</td>
+      </tr>
+      <tr>
+        <td>Deletes user</td>
+        <td>/users/:id</td>
+        <td>DELETE</td>
+        <td>None</td>
+        <td>A JSON object with a success message</td>
+      </tr>
+    </table>
   </body>
 </html>

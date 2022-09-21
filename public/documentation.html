@@ -60,35 +60,35 @@
       </tr>
       <tr>
         <td>Register user</td>
-        <td>/users/register</td>
+        <td>/users</td>
         <td>POST</td>
         <td><code>{"name": "Toby"}</code></td>
         <td>A JSON object with a success message</td>
       </tr>
       <tr>
         <td>Updates user information</td>
-        <td>/users/:id</td>
+        <td>/users/:username</td>
         <td>PUT</td>
         <td><code>{"name": "Toby"}</code></td>
         <td>A JSON object with a success message</td>
       </tr>
       <tr>
         <td>Adds a movie to users favorites list</td>
-        <td>/users/movies/favorites</td>
+        <td>/users/:username/movies/:movieID</td>
         <td>POST</td>
         <td><code>{"movieId":"7890"}</code></td>
         <td>A JSON object with a success message</td>
       </tr>
       <tr>
-        <td>Deletes a movies fro users favorites list</td>
-        <td>/users/movies/favorites/:id</td>
+        <td>Deletes a movies from users favorites list</td>
+        <td>/users/:username/movies/:movieID</td>
         <td>DELETE</td>
         <td>None</td>
         <td>A JSON object with a success message</td>
       </tr>
       <tr>
         <td>Deletes user</td>
-        <td>/users/:id</td>
+        <td>/users/:username</td>
         <td>DELETE</td>
         <td>None</td>
         <td>A JSON object with a success message</td>

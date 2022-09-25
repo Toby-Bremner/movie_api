@@ -26,7 +26,7 @@ let movies = [
     Description:
       "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.",
     Director: {
-      Name: "Francis Forc Coppola",
+      Name: "Francis Ford Coppola",
       Bio: "Famous movie director",
       Birth: "1939",
     },
@@ -56,7 +56,7 @@ let movies = [
     Description:
       "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
     Director: {
-      Name: "Francis Forc Coppola",
+      Name: "Francis Ford Coppola",
       Bio: "Famous movie director",
       Birth: "1939",
     },
